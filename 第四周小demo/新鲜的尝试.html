@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/第一个.css">
+    <link rel="stylesheet" href="./css/第二个.css">
+    <link rel="stylesheet" href="./css/第三个.css">
+    <link rel="stylesheet" href="./css/第四个.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="./js/第一个.js"></script>
+    <title>两个动画,两个导航栏</title>
+    <link href="./素材/acs 容器服务.png" rel="shortcut icon" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div id="menu">
+        <div id="imglist">
+            <div id="list1"></div>
+            <div id="list2"></div>
+            <span id="expand"></span>
+            <div id="list3"></div>
+            <div id="list4"></div>
+            <div id="scrolltag"></div>
+        </div>
+        <ul id="anotherimglist">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <span id="expand2"></span>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <!-- 就是外面的框框先动,到位置了,里面的线条再增长,就可以实现左边右边还可以中间 -->
+            <!-- <div id="uniqueTAG">
+                <div id="liner"></div>
+            </div> -->
+        </ul>
+    </div>
+
+    <div id="moveround" onclick="movedown()">
+        <div id="movedisappear_below"></div>
+        <div id="upone"></div>
+        <div id="standone"></div>
+        <div id="anotherround"></div>
+        <div id="triangle"></div>
+    </div>
+    <div id="stickit">
+        <div id="cycle"></div>
+        <img src="./素材/第二个旋转图片.png" id="insideimg">
+        <div id="growround"></div>
+    </div>
+
+</body>
+
+</html>

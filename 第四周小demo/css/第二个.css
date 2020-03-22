@@ -1,0 +1,79 @@
+* {
+    text-emphasis: none;
+    list-style: none;
+    border: none;
+    margin: none;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#stickit {
+    position: relative;
+    margin: 0 auto;
+    border-radius: 540px;
+    display: flex;
+    width: 540px;
+    height: 540px;
+    overflow: hidden;
+    background-color: #ffffff;
+    margin-bottom: 100px;
+}
+
+#cycle {
+    position: absolute;
+    border-radius: 540px;
+    /* display: flex; */
+    border-bottom: 20px solid blue;
+    border-top: 20px solid blue;
+    border-left: 20px solid red;
+    border-right: 20px solid red;
+    width: 540px;
+    height: 540px;
+    z-index: 2;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 2s;
+}
+
+#insideimg {
+    display: block;
+    position: absolute;
+    width: 460px;
+    left: 50px;
+    height: unset;
+    transition: width 2s;
+    /* transition: height 2s; */
+}
+
+#cycle:hover {
+    transform: rotate(180deg);
+    border-bottom: 10px solid blue;
+    border-top: 10px solid blue;
+    border-left: 10px solid red;
+    border-right: 10px solid red;
+}
+
+#stickit:hover #insideimg {
+    width: 600px;
+    height: unset;
+}
+
+#growround {
+    width: 0px;
+    position: absolute;
+    left: 250px;
+    top: 250px;
+    height: 0px;
+    border-radius: 0px;
+    transition: all 2s;
+    background: transparent;
+}
+
+#stickit:hover #growround {
+    width: 540px;
+    height: 540px;
+    top: 0;
+    left: 0;
+    border: 5px solid blue;
+    border-radius: 540px;
+}

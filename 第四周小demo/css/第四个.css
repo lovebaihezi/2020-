@@ -1,0 +1,65 @@
+#anotherimglist {
+    position: relative;
+    width: 1600px;
+    height: 102px;
+    display: flex;
+    top: 0px;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    font-size: 0;
+    transition: all .5s;
+}
+
+#expand2 {
+    position: relative;
+    background: transparent;
+    height: 100%;
+    width: 600px;
+    z-index: 3;
+    transition: all .5s;
+}
+
+#anotherimglist li {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    transition: all .5s;
+    cursor: pointer;
+    position: relative;
+    background-size: cover;
+    background-position: center -10px;
+    padding: 5px;
+}
+
+#anotherimglist :nth-child(-n+5) {
+    background-image: url(../素材/前五个.jpg);
+}
+
+#anotherimglist :nth-child(n+7) {
+    background-image: url(../素材/后五个.png);
+}
+
+li::before {
+    content: "";
+    left: 100%;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-bottom: 2px solid #000000;
+    transition: all 0.2s linear;
+}
+
+#anotherimglist li:hover::before {
+    width: 100%;
+    left: 0;
+    transition-delay: 0.1s;
+    border-bottom-color: #000000;
+}
+
+li:hover~li::before {
+    /*~ 选择器：查找指定元素后面的所有兄弟结点*/
+    left: 0;
+    /*处于hover后面元素的下划线从左侧开始显示*/
+}

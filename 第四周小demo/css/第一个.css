@@ -1,0 +1,100 @@
+#moveround {
+    margin: 0 auto;
+    margin-bottom: 100px;
+    margin-top: 300px;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 500px;
+    background-image: url(../素材/第一个上浮图片.jpg);
+    background-position: center -110px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#standone {
+    position: absolute;
+    width: 10px;
+    height: 180px;
+    border-radius: 10px;
+    background-color: rgba(102, 41, 182, 0.938);
+    opacity: 60%;
+    top: 160px;
+    left: 200px;
+    z-index: 5;
+    transition: all 1s;
+}
+
+#upone {
+    transform: rotate(120deg);
+    position: absolute;
+    width: 10px;
+    height: 180px;
+    border-radius: 10px;
+    background-color: rgba(102, 41, 182, 0.938);
+    opacity: 60%;
+    z-index: 5;
+    left: 274px;
+    top: 116px;
+    transition: all 1s;
+}
+
+#movedisappear_below {
+    position: absolute;
+    transform: rotate(60deg);
+    left: 274px;
+    top: 204px;
+    width: 10px;
+    opacity: 60%;
+    height: 180px;
+    background-color: rgba(102, 41, 182, 0.938);
+    border-radius: 10px;
+    z-index: 5;
+    transition: all 1s;
+}
+
+#anotherround {
+    width: 500px;
+    height: 500px;
+    border-radius: 500px;
+    transition: all;
+    z-index: 3;
+    transition: all 2s;
+}
+
+#triangle {
+    opacity: 20%;
+    position: absolute;
+    display: none;
+    width: 0;
+    height: 0;
+    border-radius: 1px;
+    border-right: 0 solid transparent;
+    border-left: 155px solid rgb(227, 227, 231);
+    border-top: 90px solid transparent;
+    border-bottom: 90px solid transparent;
+    left: 204px;
+    top: 160px;
+    z-index: 4;
+    transition: all 1s;
+}
+
+#moveround:hover {
+    background-position: center -200px;
+    width: 520px;
+    height: 520px;
+    border-radius: 500px;
+    border: 10px solid rgb(62, 224, 245);
+}
+
+#moveround:hover #anotherround {
+    border-bottom: 10px solid blue;
+    border-top: 10px solid blue;
+    border-left: 10px solid red;
+    border-right: 10px solid red;
+    transform: rotate(90deg);
+}
+
+#moveround:hover #triangle {
+    display: block;
+}
