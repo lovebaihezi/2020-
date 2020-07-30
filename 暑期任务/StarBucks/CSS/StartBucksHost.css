@@ -1,0 +1,280 @@
+@font-face {
+    font-family: A;
+    src: url(https://www-static.chinacdn.starbucks.com.cn/prod/assets/fonts/gotham-book.woff);
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    line-height: 160%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    color: rgba(0, 0, 0, 0.87);
+    letter-spacing: 0.4px;
+    line-height: 160%;
+    font-size: 1.6rem;
+    text-decoration: none;
+    overflow: hidden;
+    font-weight: 400;
+    font-family: "Gotham", Helvetica, Arial, PingFangSC-Regular, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    height: 100% !important;
+    /*高度会影响左边区域的定位问题*/
+    background-color: #f7f7f7;
+}
+
+@media (min-width: 641px) {
+    html {
+        font-size: 59%;
+    }
+}
+
+#MainMenu {
+    width: calc(30% - 5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+    overflow: visible;
+    z-index: 10;
+}
+
+#HeadMenu {
+    height: 48px;
+    box-sizing: content-box;
+    padding: 24px;
+    position: relative;
+}
+
+#DetailedInformation {
+    width: calc(70% + 5px);
+    height: 100%;
+    position: absolute;
+    /* padding: 24px 0; */
+    right: 0px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #00A862;
+    cursor: pointer;
+    float: left;
+    margin-right: 12px;
+    width: 36px;
+}
+
+.logo img {
+    width: 36px;
+    max-width: 100%;
+    /* float: left; */
+}
+
+#List1 {
+    list-style: none;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+#List1 li {
+    display: block;
+    float: left;
+    /* width: max-content;
+    height: max-content; */
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 5px 10px 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#SwitchMenu {
+    /* padding-top: 6px; */
+    float: right;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.1s linear;
+    margin-top: 6px;
+}
+
+#SwitchMenu img {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    position: absolute;
+    right: 24px;
+    transition: all 0.1s linear;
+}
+
+#SwitchMenu img:last-child {
+    padding: 3.5px;
+    width: 17px;
+    height: 17px;
+}
+
+@media(min-width:1025px) {
+    #WholeMenu {
+        display: table;
+        width: 100%;
+        height: calc(100% - 98px);
+    }
+    #ListChoose {
+        max-width: calc(100% - 72px);
+        overflow: hidden;
+        display: inline-block;
+    }
+}
+
+#WelcomeSentence {
+    margin-bottom: 24px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+#Account {
+    width: 100%;
+    color: #00A862;
+}
+
+#Account span {
+    margin-left: -3px;
+}
+
+#Login {
+    float: left;
+    margin-right: 24px;
+    margin-top: 8px;
+    padding: 3px 0;
+    text-decoration: none;
+    color: #00A862;
+}
+
+#Login img {
+    margin-right: 4px;
+    margin-top: -3px;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+#Login span {
+    color: #00A862;
+    font-size: 1.4rem;
+}
+
+#Register {
+    padding: 2px 12px;
+    background: none;
+    border: 1px solid #00A862;
+    border-radius: 48px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    color: #00A862;
+    display: inline-block;
+    font-weight: 500;
+    outline: none;
+    overflow: hidden;
+    /* padding: 6px 18px; */
+    position: relative;
+    transition-duration: 0.1s;
+    transition-property: background, border-color, color;
+}
+
+.WhichShow {
+    position: absolute;
+    transition: all 0.2s linear;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.WhichShow>div {
+    padding: 0 24px 0 84px;
+    display: table-cell;
+    position: absolute;
+    top: 37%;
+    height: auto;
+    margin: auto 0;
+    clear: both;
+    min-height: 62px;
+}
+
+.WhichShow p a {
+    width: max-content;
+    display: block;
+    padding: 6px 0;
+    color: rgba(0, 0, 0, 0.56);
+    /* font-weight: 400; */
+}
+
+.on {
+    /* display: table-cell; */
+    opacity: 1;
+    display: table-cell;
+    visibility: visible;
+}
+
+.off {
+    opacity: 0;
+    /* display: none; */
+    visibility: hidden;
+}
+
+.WhichShow h2 {
+    font-size: 2.6rem;
+    margin-bottom: 6px;
+    font-weight: 700;
+    line-height: 160%;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.WhichShow .Active a {
+    /* !选择器的优先级问题 */
+    font-weight: 700;
+    border-bottom: 3px solid #00A862;
+    color: rgba(0, 0, 0, 0.87);
+    padding: 6px 0;
+    margin-bottom: 2px;
+    padding-bottom: 1px;
+}
+
+#Account>ul>li {
+    padding: 8px 0;
+    font-weight: 700;
+    height: 14px;
+    cursor: pointer;
+}
+
+#Account {
+    top: 18%;
+}
+
+#Account>ul>li:nth-child(4) {
+    padding: 0;
+}
+
+#AboutStarBucks p:hover a {
+    color: #00A862;
+}
+
+hr {
+    background: rgba(0, 0, 0, 0.12);
+    border: 0;
+    height: 1px;
+    margin: 12px 0;
+}

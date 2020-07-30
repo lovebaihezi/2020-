@@ -1,0 +1,470 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    line-height: 160%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    color: rgba(0, 0, 0, 0.87);
+    letter-spacing: 0.4px;
+    line-height: 160%;
+    font-size: 1.6rem;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: "Gotham", Helvetica, Arial, PingFangSC-Regular, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    overflow-x: hidden;
+    font-size: 62.5%;
+}
+
+#ImgSwitch {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    min-height: 624.375px;
+    display: block;
+    box-sizing: border-box;
+    visibility: visible;
+}
+
+#ImgSwitch a {
+    position: absolute;
+    top: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#advertisement {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0px 6px;
+    color: #fff;
+    background-color: #000;
+    font-size: 1.2rem;
+    line-height: 180%;
+    opacity: 0.6;
+    border-radius: 2px;
+    z-index: 200;
+}
+
+#SwitchButton {
+    background-size: contain;
+    border: 0;
+    background: url(https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-arrow-white.svg) transparent no-repeat center center;
+    font-size: 0;
+    height: 48px;
+    line-height: 0;
+    outline: none;
+    padding: 0px;
+    position: absolute;
+    right: 24px;
+    z-index: 10;
+    top: 50%;
+    margin-top: -25px;
+    cursor: pointer;
+    width: 48px;
+    transition: all 0.2s ease;
+}
+
+#SwitchButton:hover {
+    right: 16px;
+}
+
+.stacked1 {
+    padding: 26px 0;
+    position: relative;
+    top: 0;
+    display: flex;
+    height: max-content;
+}
+
+.Insider {
+    max-width: 100%;
+    padding: 0 24px;
+    margin: 0 auto;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+}
+
+.Insider ul {
+    list-style: none;
+    margin: -12px;
+    overflow: visible;
+    margin-top: -10px;
+}
+
+.Insider ul li {
+    padding: 12px;
+    z-index: 10;
+    float: left;
+    border-radius: 2px;
+    display: block;
+    box-sizing: border-box;
+    width: 33.33%;
+    transition: all 0.2s ease;
+}
+
+.Insider ul li:hover {
+    transform: translate3d(0, -6px, 0);
+}
+
+.Insider ul li img {
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.Insider ul li img:hover {
+    box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.12);
+}
+
+.stacked2 {
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    clear: both;
+    top: 0;
+    max-height: 216px;
+    overflow: visible;
+}
+
+.stacked3 {
+    overflow: visible;
+    display: block;
+    height: 100%;
+    max-height: 416px;
+}
+
+.Insider2 {
+    padding: 0 24px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    overflow: visible;
+    width: 768px;
+    height: 314px;
+}
+
+.Insider2 h3 {
+    margin-bottom: 12px;
+}
+
+.Insider2 p {
+    margin-bottom: 8px;
+}
+
+.InsideInsider2 {
+    display: block;
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    max-width: 720px;
+    max-height: 216px;
+}
+
+.Insider article {
+    font-size: 2.2rem;
+    color: #000;
+    line-height: 160%;
+}
+
+.InsideInsider2 article {
+    padding: 36px 0;
+    clear: left;
+    float: left;
+    display: block;
+    width: 50%;
+    overflow: visible;
+    max-height: 216px;
+}
+
+.InsideInsider2 article div {
+    margin: 0 0 22px;
+    word-break: normal;
+}
+
+.InsideInsider2 article div p {
+    font-weight: 200;
+}
+
+.InsideInsider2 article div a {
+    color: #C2A661;
+    margin: 8px 0;
+    display: block;
+    /* vertical-align: middle; */
+}
+
+.InsideInsider2 h2 {
+    clear: both;
+    margin-bottom: 18px;
+    margin-top: 8px;
+    font-size: 2.2rem;
+}
+
+#LoginAndRegister {
+    width: 100%;
+    clear: both;
+    display: block;
+}
+
+#InsideLogin,
+#InsideRegister {
+    padding: 2px 12px;
+    background: none;
+    border: 1px solid #00A862;
+    border-radius: 48px;
+    box-sizing: border-box;
+    color: #00A862;
+    display: inline-block;
+    font-weight: 500;
+    outline: none;
+    overflow: hidden;
+    padding: 6px 18px;
+    position: relative;
+    transition-duration: 0.1s;
+    transition-property: background, border-color, color;
+}
+
+#StarBucksClub {
+    position: static;
+    overflow: visible;
+    width: 236px;
+    height: 0;
+    display: block;
+    right: 0;
+    top: 0;
+    max-width: 100%;
+    margin: 0;
+}
+
+#StarBucksClub img {
+    height: 72px;
+    width: 236px;
+    top: 50%;
+    right: 0;
+    position: absolute;
+    display: flex;
+    margin-top: -36px;
+    transform: translate3d(0, 0, 0);
+    max-width: 100%;
+}
+
+.StartBucksRecommend {
+    padding: 36px 0;
+    text-align: center;
+    height: 416px;
+    overflow: visible;
+    display: block;
+    clear: both;
+}
+
+.StartBucksRecommend article {
+    margin-bottom: 18px;
+    line-height: 140%;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.StartBucksRecommend p {
+    font-weight: 200;
+}
+
+#CardPlace {
+    padding-top: 48px;
+    display: block;
+    height: 248px;
+}
+
+.CoffeeCard {
+    padding: 12px;
+    float: left;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 2px;
+    overflow: visible;
+    width: 25%;
+    display: flex;
+}
+
+.CoffeeCard a:hover {
+    box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.12);
+    transform: translate3d(0, -4px, 0);
+}
+
+.CoffeeCard p,
+.CoffeeCard h3 {
+    display: block;
+}
+
+.CoffeeCard a {
+    padding: 0 6px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+    clear: both;
+    display: table;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.CoffeeCard img {
+    position: relative;
+    width: auto;
+    height: 72px;
+    margin: 0 auto;
+    margin-top: -28px;
+    margin-bottom: 0;
+}
+
+.CoffeeCard h3 {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.CoffeeCard p {
+    margin-bottom: 18px;
+    word-break: normal;
+}
+
+.CoffeeCard a div {
+    color: #C2A661;
+    margin-bottom: 18px;
+    word-break: normal;
+    font-weight: 200;
+}
+
+#CoffeeHouse {
+    clear: both;
+    display: block;
+    overflow: visible;
+    background-color: #fff;
+}
+
+#CoffeeHouseCardPlace {
+    display: flex;
+    margin-right: 24px;
+    margin-bottom: -24px;
+    padding-bottom: 24px;
+    white-space: nowrap;
+    overflow: visible;
+    width: 100%;
+}
+
+#CardPlaceHold {
+    position: relative;
+    display: flex;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow-x: visible;
+    overflow-y: visible;
+    max-width: 768px;
+    width: 100%;
+}
+
+.CoffeeHouseCard {
+    width: 290px;
+    position: relative;
+    display: block;
+    margin-right: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: visible;
+    height: 217px;
+    display: inline-block;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.CoffeeHouseCard:hover {
+    box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.12);
+    transform: translate3d(0, -4px, 0);
+}
+
+.Kinds {
+    position: absolute;
+    display: flex;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: #C2A661;
+    padding: 4px 12px;
+    left: 0;
+    z-index: 10;
+    top: 6px;
+}
+
+.CoffeeHouseImg {
+    overflow: hidden;
+    width: 290px;
+    height: 168px;
+}
+
+.CoffeeHouseImg img {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+.CoffeeHouseInformation {
+    width: 100%;
+    text-align: start;
+    padding: 5% 5%;
+    padding-top: 3%;
+}
+
+#check1 {
+    height: 100%;
+    max-height: 391px;
+}
+
+#check2 {
+    height: 100%;
+    display: block;
+}
+
+#SecureInformation {
+    position: relative;
+    color: #666;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    line-height: 160%;
+    line-height: 40px;
+    width: 100%;
+    background-color: #fff;
+}
+
+#SecureInformation * {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #fff;
+}
+
+#SecureInformation img {
+    width: 10px;
+    height: 10px;
+    max-width: 100%;
+    position: initial;
+    clear: both;
+    display: inline-block;
+}

@@ -1,0 +1,479 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    line-height: 160%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    color: rgba(0, 0, 0, 0.87);
+    letter-spacing: 0.4px;
+    line-height: 160%;
+    font-size: 1.6rem;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: "Gotham", Helvetica, Arial, PingFangSC-Regular, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    overflow-x: hidden;
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+}
+
+#Container {
+    position: relative;
+    top: 0;
+    height: 182px;
+}
+
+.stacked1 {
+    padding: 54px 0 28px 0;
+    position: relative;
+    top: 0;
+    display: flex;
+    height: max-content;
+}
+
+.Insider {
+    max-width: 100%;
+    padding: 0 24px;
+    margin: 0 auto;
+    display: block;
+    min-width: 768px;
+    max-height: 499px;
+    overflow: visible;
+    box-sizing: border-box;
+}
+
+.stacked2 {
+    background-color: #fff;
+    position: relative;
+    height: 100%;
+    display: block;
+    clear: both;
+    top: 0;
+    padding-top: 18px;
+    max-height: 456px;
+    overflow: visible;
+}
+
+.stacked3 {
+    overflow: visible;
+    display: block;
+    height: 100%;
+    max-height: 416px;
+}
+
+.Insider2 {
+    padding: 24px 24px 36px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    overflow: visible;
+    max-width: 768px;
+    height: 438px;
+}
+
+.StartBucksRecommend {
+    padding: 36px 0;
+    text-align: center;
+    height: 416px;
+    overflow: visible;
+    display: block;
+    clear: both;
+}
+
+#HeaderImg {
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    max-height: 182px;
+    position: absolute;
+    top: 0;
+    background-image: url(https://www.starbucks.com.cn/images/pages/starbucks-in-china.jpg);
+}
+
+#HeaderImg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 182px;
+    background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.7) 81%);
+}
+
+#ImgFont {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+}
+
+#ImgFont h1 {
+    margin-top: 60px;
+    color: #fff;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+#ImgFont p {
+    color: #fff;
+}
+
+.AboutCard {
+    width: 30%;
+    padding: 12px;
+    min-height: 396px;
+    max-width: 224px;
+    position: relative;
+    margin: 0 12px;
+    float: left;
+    /* display: inline-block; */
+    background-color: #fff;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.AboutCard h2 {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: -30px;
+    left: 0;
+}
+
+.AboutCard h2 a {
+    color: #009758;
+}
+
+.AboutCard img {
+    opacity: 0.3;
+    position: absolute;
+    z-index: 10;
+    height: 84px;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    opacity: 0.3;
+}
+
+.BackgroundGreen {
+    border-top: 4px solid #00653E;
+    /* max-width: 224px; */
+    width: 224px;
+    margin-left: -12px;
+    margin-top: -12px;
+    padding: 18px;
+    position: relative;
+    background-color: #00A862;
+    top: 0;
+}
+
+.BackgroundGreen * {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+
+.BackgroundGreen h3 {
+    font-size: 3.2rem;
+}
+
+.BackgroundWhite {
+    min-height: 276px;
+    padding: 18px 6px;
+}
+
+.Insider2>h3 {
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    color: #00A862;
+}
+
+.TwoSide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    max-height: 343px;
+}
+
+.Side1 {
+    width: 50%;
+    height: 100%;
+    padding: 12px;
+}
+
+.Side1>h3 {
+    margin-bottom: 24px;
+}
+
+.Side1>p {
+    margin-bottom: 24px;
+}
+
+.Side1 ul {
+    margin: 0 0 24px 24px;
+}
+
+.Side1>ul>li>p {
+    margin-bottom: 6px;
+}
+
+.Side2 {
+    width: 50%;
+    padding: 12px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://www.starbucks.com.cn/images/pages/starbucksinchina.jpg);
+}
+
+.Button {
+    background: none;
+    border: 1px solid #00A862;
+    border-radius: 48px;
+    box-sizing: border-box;
+    color: #00A862;
+    display: inline-block;
+    font-weight: 500;
+    outline: none;
+    overflow: hidden;
+    padding: 6px 18px;
+    position: relative;
+    transition-duration: 0.1s;
+    transition-property: background, border-color, color;
+}
+
+.Button>a {
+    color: #00A862;
+}
+
+#News {
+    height: 100%;
+    min-height: 794px;
+    padding: 0 24px;
+    padding-top: 18px;
+}
+
+#RecentlyNews {
+    min-height: 794px;
+}
+
+#RecentlyNews ul {
+    list-style: none;
+}
+
+#RecentlyNews>ul>li {
+    margin-bottom: 24px;
+}
+
+#RecentlyNews>ul>li>a {
+    margin: 12px 0 24px 0;
+    min-height: 192px;
+    width: 100%;
+    display: block;
+    background: #FFF;
+    border-radius: 2px;
+    transition: all 0.1s ease;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+#RecentlyNews>ul>li>a:hover {
+    transform: translatex(4px);
+    box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.12);
+}
+
+#RecentlyNews>div {
+    width: 100%;
+    max-width: 720px;
+    height: max-content;
+    position: absolute;
+    bottom: 36px;
+}
+
+#RecentlyNews>div>.Button {
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.ImgSet {
+    display: inline-flex;
+    background-size: cover;
+    float: left;
+    background-position: 50% 50%;
+    background-color: #f7f7f7;
+    min-height: 192px;
+    width: 224px;
+}
+
+#RecentlyNews>ul>li>a>div:nth-child(2) {
+    width: calc(100% - 225px);
+    display: inline-block;
+    min-height: 192px;
+    padding: 18px 24px 0 24px;
+}
+
+#RecentlyNews>ul>li>a>div:nth-child(2)>h4 {
+    margin-bottom: 18px;
+    width: 100%;
+    clear: both;
+    display: block;
+    height: max-content;
+}
+
+#RecentlyNews>ul>li>a>div:nth-child(2)>article {
+    margin-bottom: 24px;
+    width: 100%;
+    clear: both;
+    line-height: 140%;
+    white-space: normal;
+    display: block;
+    height: max-content;
+}
+
+#AboutUs {
+    min-height: 554px;
+    padding: 18px 24px 0;
+    background-color: transparent;
+    height: max-content;
+    display: block;
+    position: relative;
+    /* display: flex; */
+}
+
+#AboutUs>.Insider {
+    min-height: 458px;
+    /* display: flex; */
+    padding: 24px 24px 36px;
+    clear: both;
+    max-width: 768px;
+    max-height: max-content;
+    height: max-content;
+}
+
+#AboutUs>.Insider>h3 {
+    width: 100%;
+    vertical-align: middle;
+    height: max-content;
+    text-align: center;
+    /* display: block; */
+    color: #00A862;
+    margin-bottom: 24px;
+}
+
+#AboutUs>.Insider>ul {
+    list-style: none;
+    display: block;
+    width: 100%;
+    height: max-content;
+}
+
+#AboutUs>.Insider>ul>li {
+    width: 100%;
+    /* max-width: 720px; */
+    height: max-content;
+    max-height: 101px;
+    background: #FFF;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding: 18px;
+    transition: all 0.2s ease;
+    margin-bottom: 18px;
+    cursor: pointer;
+}
+
+#AboutUs>.Insider>ul>li::before {
+    background: linear-gradient(rgba(255, 255, 255, 0) 24px, #FFF);
+    content: '';
+    height: 100%;
+    left: 18px;
+    /* opacity: 0; */
+    position: absolute;
+    bottom: 18px;
+    transition-duration: 0.1s;
+    transition-property: opacity;
+    width: 100%;
+    max-width: 694px;
+    height: 48px;
+    /* display: none; */
+}
+
+#AboutUs>.Insider>ul>li>div {
+    background: url(https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-chevron-down.svg) no-repeat center center;
+    position: absolute;
+    height: 24px;
+    right: 18px;
+    /* z-index: -1; */
+    top: 18px;
+    transition-duration: 0.2s;
+    transition-property: transform;
+    width: 24px;
+    opacity: 1;
+}
+
+#AboutUs>.Insider>ul>li>article {
+    padding-top: 26px;
+    display: block;
+    overflow: hidden;
+    max-height: 48px;
+}
+
+.close::before {
+    opacity: 1;
+    display: block;
+}
+
+.expend::before {
+    opacity: 0;
+    display: none;
+}
+
+#AboutUs>.Insider>ul>.expend {
+    max-height: 100%;
+    height: max-content;
+}
+
+.expend>div {
+    transform: rotate(-180deg);
+}
+
+#AboutUs>.Insider>ul>.expend>article {
+    max-height: max-content;
+}
+
+#ContainLogo1 {
+    display: block;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    clear: both;
+    width: 100%;
+    min-width: 100%;
+}
+
+#Logo1 {
+    background-image: url(https://www-static.chinacdn.starbucks.com.cn/assets/images/logo.svg);
+    background-size: cover;
+    height: 96px;
+    opacity: 0.2;
+    margin: 0 auto;
+    width: 144px;
+}
