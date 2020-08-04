@@ -1,0 +1,217 @@
+html {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 262.5%;
+}
+
+@font-face {
+    font-family: SourceCode;
+    src: url(https://github.com/adobe-fonts/source-code-pro/blob/release/TTF/SourceCodePro-ExtraLightIt.ttf);
+}
+
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+a {
+    text-decoration: none;
+}
+
+*:active {
+    outline: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.Top {
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+    min-height: 150px;
+    background-image: url(../Img/Top.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.BlackCover::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.7) 81%);
+}
+
+.ContainCenter {
+    position: relative;
+    /* display: flex; */
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 1rem;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.Center {
+    /* padding: calc(50% - 20px) calc(50% - 60px); */
+    /* z-index: 10; */
+}
+
+input {
+    width: 80%;
+    height: calc(100% - 1px);
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+    background-color: transparent;
+    cursor: text;
+    opacity: 0.7;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+input::before {
+    content: "";
+    width: 80%;
+    max-width: 480px;
+    max-height: 120px;
+    position: absolute;
+    height: 100%;
+}
+
+input:hover {
+    opacity: 1;
+}
+
+input:focus {
+    outline: none;
+}
+
+.Button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0.7;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Button:hover {
+    opacity: 1;
+}
+
+.Center {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    min-height: 400%;
+    background-image: url(../Img/BackGround.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+}
+
+.FlexContain {
+    width: 100%;
+    height: 100%;
+    min-width: 960px;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.flex {
+    width: 20%;
+    position: relative;
+    top: 0;
+    float: left;
+    display: none;
+    height: 5%;
+    max-height: max-content;
+    cursor: pointer;
+    padding: 1.5%;
+    margin: 0.5%;
+    background-color: transparent;
+}
+
+.Active {
+    display: flex;
+}
+
+.Border {
+    border-left: 0.1px solid snow;
+    border-right: 0.1px solid snow;
+}
+
+.Animation {
+    transition: all 0.5s linear;
+}
+
+.Animation::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0, #ffffff 0, #fbd4d4 90%);
+    position: absolute;
+    opacity: 0.3;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    clear: both;
+}
+
+.Animation:hover::before {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.flex>svg {
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    top: 0;
+    right: 0;
+    opacity: 0.4;
+}
+
+.flex>svg:hover {
+    opacity: 1;
+}
+
+.top {
+    display: block;
+    width: 120px;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    height: 60px;
+}
+
+.bottom {
+    display: block;
+    width: 80%;
+    padding: 10%;
+    padding-bottom: 0;
+    overflow: hidden;
+    position: relative;
+    top: 40px;
+    font-size: 0.6rem;
+    height: calc(100% - 60px);
+    max-height: 120px;
+}
