@@ -25,7 +25,8 @@ a {
     text-decoration: none;
 }
 
-*:active {
+*:active,
+*:focus {
     outline: none;
 }
 
@@ -55,30 +56,27 @@ ol {
 
 .ContainCenter {
     position: relative;
-    /* display: flex; */
     width: 100%;
     height: 100%;
     max-width: 600px;
     max-height: 1rem;
     margin: 0 auto;
     top: 50%;
+    z-index: 10;
     transform: translateY(-50%);
-}
-
-.Center {
-    /* padding: calc(50% - 20px) calc(50% - 60px); */
-    /* z-index: 10; */
 }
 
 input {
     width: 80%;
     height: calc(100% - 1px);
+    min-height: 1.2rem;
     position: relative;
     border: none;
     border-bottom: 1px solid #ffffff;
     color: #ffffff;
     background-color: transparent;
     cursor: text;
+    font-size: 1.2rem;
     opacity: 0.7;
     padding: 0;
     transition: all 0.2s ease;
@@ -104,8 +102,9 @@ input:focus {
 .Button {
     position: relative;
     display: inline-block;
-    cursor: pointer;
+    cursor: pointer !important;
     opacity: 0.7;
+    z-index: 10;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -142,7 +141,6 @@ input:focus {
     display: none;
     height: 5%;
     max-height: max-content;
-    cursor: pointer;
     padding: 1.5%;
     margin: 0.5%;
     background-color: transparent;
@@ -188,6 +186,7 @@ input:focus {
     top: 0;
     right: 0;
     opacity: 0.4;
+    cursor: pointer;
 }
 
 .flex>svg:hover {
@@ -211,7 +210,11 @@ input:focus {
     overflow: hidden;
     position: relative;
     top: 40px;
-    font-size: 0.6rem;
+    font-size: 1.2rem;
     height: calc(100% - 60px);
     max-height: 120px;
+    border: none;
+    background-color: transparent;
+    cursor: text;
+    resize: none;
 }
