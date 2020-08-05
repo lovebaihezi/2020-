@@ -18,22 +18,28 @@ FlexBox.prototype = {
         console.log(this.NUmber);
     },
 
-    TextAreaSubmit: function() {
-        FlexBox.Node.HTMLTextAreaElement.addEventListener("ondblclick", function() {
-            SwitchToTextArea();
-        });
-        AddEnterKeyPress(this, this.TextAreaDisabled);
-    },
-
     SwitchToTextArea: function() {
-        this.Node.HTMLTextAreaElement.disabled = false;
+        this.element.getElementsByClassName("TextArea")[0].disabled = false;
     },
 
-    TextAreaDisabled: function() {
-        this.Node.HTMLTextAreaElement.disabled = true;
+    TextAreaDisabled: function(Div) {
+        Div.element.getElementsByClassName("TextArea")[0].disabled = true;
     },
 
     ElementListGet: document.getElementsByClassName("flex"),
+
+    TextAreaSubmit: function() {
+        var Div = this;
+        this.element.ondblclick = function() {
+            Div.SwitchToTextArea();
+        };
+        Div.element.getElementsByClassName("TextArea")[0].addEventListener("keyup", function(Key) {
+            Key.preventDefault();
+            if (Key.keyCode === 13) {
+                Div.TextAreaDisabled(Div);
+            }
+        });
+    },
 
     DeleteSelf: function() {
         flexList[this.Number - 1] = null;
@@ -44,11 +50,10 @@ FlexBox.prototype = {
         var flag = false;
         this.Node[1].onclick = function() {
             flag = true;
-            for (i = 0; i < ThisElement.ElementListGet.length; i++) {
-                console.log(i);
-                ThisElement.ElementListGet[i].getElementsByClassName("Number")[0].innerHTML = i;
-            }
             ThisElement.element.parentElement.removeChild(ThisElement.element);
+            for (i = 0; i < ThisElement.ElementListGet.length; i++) {
+                ThisElement.ElementListGet[i].getElementsByClassName("Number")[0].innerHTML = i + 1;
+            }
         }
         return flag;
     }
@@ -56,6 +61,7 @@ FlexBox.prototype = {
 
 var FlexContain = document.getElementsByClassName("FlexContain")[0];
 var Input = document.getElementById("Submit");
+var BackUp = FlexContain.lastElementChild.cloneNode(true);
 
 window.onload = function() {
     var Number = document.getElementsByClassName("flex").length;
@@ -71,6 +77,7 @@ window.onload = function() {
             if (FlexBoxList[i].ReMoveDiv()) {
                 FlexBoxList[i].DeleteSelf();
             }
+            FlexBoxList[i].TextAreaSubmit();
         }
     })();
     AddEnterKeyPress(Input, AddFLexBox);
@@ -97,9 +104,23 @@ function SubmitClick(Element, Doing) {
 function AddFLexBox() {
     if (Input.value != "") {
         var BoxList = document.getElementsByClassName("flex");
-        var NewBox = FlexContain.lastElementChild.cloneNode(true);
+        if (FlexContain.childElementCount != 0) {
+            var NewBox = FlexContain.lastElementChild.cloneNode(true);
+        } else NewBox = BackUp;
         NewBox.getElementsByClassName("Number")[0].innerText = BoxList.length + 1;
         NewBox.getElementsByClassName("TextArea")[0].innerText = Input.value;
         FlexContain.appendChild(NewBox);
+        for (var i = 0; i < document.getElementsByClassName("flex").length; i++) {
+            FlexBoxList[i] = new FlexBox(i + 1, 1, document.getElementsByClassName("flex")[i].childNodes, document.getElementsByClassName("flex")[i]);
+        }
+        (function() {
+            for (i = 0; i < document.getElementsByClassName("flex").length; i++) {
+                if (FlexBoxList[i].ReMoveDiv()) {
+                    FlexBoxList[i].DeleteSelf();
+                }
+                FlexBoxList[i].TextAreaSubmit();
+            }
+        })();
+        console.log(FlexBoxList);
     }
 }
