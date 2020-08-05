@@ -121,6 +121,5 @@ function AddFLexBox() {
                 FlexBoxList[i].TextAreaSubmit();
             }
         })();
-        console.log(FlexBoxList);
     }
 }
